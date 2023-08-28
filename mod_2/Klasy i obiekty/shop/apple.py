@@ -4,5 +4,5 @@ class Apple:
         self.size = size
         self.price = price
 
-    def total_price(self, kilograms):
-        return self.price * kilograms
+    def total_price(self, quantity_kilograms):
+        return self.price * quantity_kilograms

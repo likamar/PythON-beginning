@@ -4,6 +4,8 @@ class Product:
         self.category = category
         self.price = price
 
+    def print_product_details(self):
+        print(f"Product name: {self.name}\nProduct category: {self.category}\nProduct price: {self.price}\n")
 
-def print_product_details(product):
-    print(product.name, product.category, product.price, sep=",")
+
+

@@ -1,7 +1,7 @@
 from shop.apple import Apple
 from shop.potato import Potato
-from shop.product import Product, print_product_details
-from shop.order import Order, print_order_details, generate_random_order
+from shop.product import Product
+from shop.order import Order, generate_random_order
 
 if __name__ == "__main__":
     apple_jonagold = Apple("Jonagold", "L", 3.50)
@@ -14,11 +14,21 @@ if __name__ == "__main__":
     print(f"Champion size: {apple_champion.size}")
     print(f"Champion price: {apple_champion.price}")
 
+    jonagold_total_price = apple_jonagold.total_price(kilograms=5)
+    champion_total_price = apple_champion.total_price(kilograms=7)
+
+    print(f"Jonagold total price: {jonagold_total_price}")
+    print(f"Champion total price: {champion_total_price}")
+
     my_potato = Potato(grade_name="Bryza", size="M", price=2.99)
 
     print(f"my_potato name: {my_potato.grade_name}")
     print(f"my_potato size: {my_potato.size}")
     print(f"my_potato price: {my_potato.price}")
+
+    bryza_total_price = my_potato.total_price(5)
+
+    print(f"Bryza total price: {bryza_total_price:.2f}")
 
     products = [
         Product("Milk", "dairy", 3.50),
@@ -27,7 +37,7 @@ if __name__ == "__main__":
     ]
 
     for product in products:
-        print_product_details(product)
+        product.print_product_details()
 
     orders = []
 
@@ -38,8 +48,8 @@ if __name__ == "__main__":
     orders.append(order_2)
 
     for order in orders:
-        print_order_details(order)
+        order.print_order_details()
 
     random_order = generate_random_order("Jan", "Kowalski")
 
-    print_order_details(random_order)
+    random_order.print_order_details()

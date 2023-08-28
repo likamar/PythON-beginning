@@ -1,7 +1,7 @@
-from shop.Apple import Apple
-from shop.Potato import Potato
-from shop.Product import Product, print_product_details
-from shop.Order import Order, print_order_details, generate_random_order
+from shop.apple import Apple
+from shop.potato import Potato
+from shop.product import Product, print_product_details
+from shop.order import Order, print_order_details, generate_random_order
 
 if __name__ == "__main__":
     apple_jonagold = Apple("Jonagold", "L", 3.50)

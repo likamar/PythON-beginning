@@ -1,5 +1,3 @@
-
-
 class OrderElement():
     def __init__(self, product, quantity):
         self.product = product

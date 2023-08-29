@@ -1,6 +1,4 @@
-from shop.product import Product
-from shop.order import Order, generate_random_order
-from shop.order_element import OrderElement
+from shop.order import generate_random_order
 
 
 def run_homework():

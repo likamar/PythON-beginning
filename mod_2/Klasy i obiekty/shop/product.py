@@ -5,7 +5,7 @@ class Product:
         self.price = price
 
     def print_product_details(self):
-        print(f"Product name: {self.name}\nProduct category: {self.category}\nProduct price: {self.price}\n")
+        print(f"Product name: {self.name} \tcategory: {self.category}\tprice: {self.price}")
 
 
 
